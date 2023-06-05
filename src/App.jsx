@@ -4,6 +4,7 @@ import {Routes, Route} from 'react-router-dom';
 /* Components Imports */
 import SignUpPage from './Pages/Signup';
 import LoginPage from './Pages/Login';
+import UserProfile from './Pages/UserProfile';
 
 import ResponsiveAppBar from './Components/Navbar';
 import HomePage from './Pages/Home';
@@ -29,7 +30,8 @@ function App() {
         <Route path="/aboutus" element={<AboutUsPage/>}/> 
 
         <Route path="/signup" element={<SignUpPage/>}/>
-        <Route path="/login" element={<LoginPage/>}/>     
+        <Route path="/login" element={<LoginPage/>}/>    
+        <Route path="/profile" element={<UserProfile/>}/>    
         {/* <Route path="/signup" element={<IsAnon><SignUpPage/></IsAnon>}/>
         <Route path="/login" element={<IsAnon><LoginPage/></IsAnon>}/> */}
 

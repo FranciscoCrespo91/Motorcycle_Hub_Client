@@ -22,6 +22,7 @@
     display: flex;
     flex-direction: column;
     border: 2px solid white;
+    border-radius: 4px;
     height: 300px;
     margin: 5px;
     padding: 5px;
@@ -46,6 +47,7 @@
 .mktplace-card img{
     width: 150px;
     margin: 3px;
+    border-radius: 5px;
 }
 .mktplace-card p{
     text-align: left;
