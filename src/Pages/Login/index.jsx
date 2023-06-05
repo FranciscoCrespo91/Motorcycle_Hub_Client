@@ -2,9 +2,8 @@ import {useState, useContext} from 'react';
 import axios from 'axios'; 
 import {Link, useNavigate} from 'react-router-dom'; 
 import authService from '../../Services/auth.service';
-import AuthContext from "../../Context/auth.context";
+import {AuthContext} from "../../Context/auth.context";
 
-import React from 'react'
 
 function LoginPage() {
   // Write State 
