@@ -1,5 +1,4 @@
 import {useState, useContext} from 'react'; 
-import axios from 'axios'; 
 import {Link, useNavigate} from 'react-router-dom'; 
 import authService from '../../Services/auth.service';
 import {AuthContext} from "../../Context/auth.context";
@@ -14,7 +13,7 @@ function LoginPage() {
   const navigate = useNavigate();
 
   // destructuring the authContext Object
-  const {storeToken} = useContext(AuthContext);
+  const {storeToken, authenticateUser} = useContext(AuthContext);
 
   // Handle Functions that handle the change of inputs
     const handleEmail = (e) => setEmail(e.target.value);
@@ -30,13 +29,14 @@ function LoginPage() {
         .then((response)=>{
             storeToken(response.data.authToken);
             // authenticate the User
+            authenticateUser();
+
+            navigate('/');
         })     
         .catch((error) =>{
             const errorDescription = error.response.data.message; 
             setErrorMessage(errorDescription);
         })
-
-
   }
     
 

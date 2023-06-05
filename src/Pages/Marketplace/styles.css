@@ -1,0 +1,61 @@
+.marketplace-body{
+    display: flex;
+    flex-direction: column;
+}
+.cards{
+    display: flex;
+    justify-content: space-around;
+}
+.cards-container{
+    display: flex;
+    flex-direction: column;
+    width: 40vw;
+    align-items: center;
+}
+
+.requests-list{
+    display: flex;
+    flex-direction: column;
+}
+
+.mktplace-card{
+    display: flex;
+    flex-direction: column;
+    border: 2px solid white;
+    height: 300px;
+    margin: 5px;
+    padding: 5px;
+}
+.card-header{
+    display: flex;
+    
+    
+}
+.card-header-info-section{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+.card-title{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 5px;
+}
+
+.mktplace-card img{
+    width: 150px;
+    margin: 3px;
+}
+.mktplace-card p{
+    text-align: left;
+}
+
+.card-description{
+    display: flex;
+    
+    align-items: baseline;
+    flex-wrap: wrap;
+    height: 100%;    
+    width: 100%;
+}
