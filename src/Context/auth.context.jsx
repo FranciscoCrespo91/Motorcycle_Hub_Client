@@ -32,12 +32,12 @@ function AuthProviderWrapper(props) {
         setIsLoading(false);
         setUser(null);
       })
-    } else {
-      // If the token was not found on localStorage
-      setIsLoggedIn(false);
-      setIsLoading(false);
-      setUser(null);
-    }
+      } else {
+        // If the token was not found on localStorage
+        setIsLoggedIn(false);
+        setIsLoading(false);
+        setUser(null);
+      }
     }
 
     // Remove Token Function 
