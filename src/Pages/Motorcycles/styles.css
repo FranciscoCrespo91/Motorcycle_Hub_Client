@@ -1,0 +1,12 @@
+
+.MuiImageList-root{
+    display: grid;
+    
+
+}
+
+ .MuiImageListItem-img{
+    width: 500px;
+    height: 250px;
+}
+ 

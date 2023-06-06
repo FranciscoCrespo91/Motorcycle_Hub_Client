@@ -1,3 +1,5 @@
+import "./styles.css"
+
 function HomePage() {
 
   return (
@@ -12,26 +14,28 @@ function HomePage() {
   </div>
   <div class="carousel-inner">
     <div class="carousel-item active">
-      <img src="public/images/Carousel1.jpg" class="d-block w-100"></img>
-      <div class="carousel-caption d-none d-md-block">
-        <h5>First slide label</h5>
+      <img  src="public/images/Carousel1.jpg" class="d-block w-100"></img>
+      
+        <div class="carousel-caption d-none d-md-block">
+        <h3>First slide label</h3>
         <p>Some representative placeholder content for the first slide.</p>
+        </div>
+      </div>
+    
+    <div class="carousel-item">
+      <img  src="public/images/motorcycles.jpg" class="d-block w-100"></img>
+      <div class="carousel-caption d-none d-md-block">
+        <h3>Brands</h3>
+        <p>Want to learn more about motorcycles and their makers ?!.</p>
+        <a href="/motorcycles">Check our list of brands here!!</a>
       </div>
     </div>
     <div class="carousel-item">
-      <img src="public/images/motorcycles.jpg" class="d-block w-100"></img>
+      <img  src="public/images/marketplace.jpg" class="d-block w-100"></img>
       <div class="carousel-caption d-none d-md-block">
-        <h5>Second slide label</h5>
-        <p>Want to check out more motorcycles ?!.</p>
-        <a href="/motorcycles">Check all the brands here!!</a>
-      </div>
-    </div>
-    <div class="carousel-item">
-      <img src="public/images/marketplace.jpg" class="d-block w-100"></img>
-      <div class="carousel-caption d-none d-md-block">
-        <h5>Third slide label</h5>
-        <p> Looking for that perfect exaust pipe? Or some warmer gloves?</p>
-        <a href="/marketplace">Check out our Marketplace</a>
+        <h3>Marketplace</h3>
+        <p> Looking for riding gear?? Or just that perfect part for your motorcycle??</p>
+        <a href="/marketplace">Check out our user based Marketplace</a>
       </div>
     </div>
   </div>
