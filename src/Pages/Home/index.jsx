@@ -1,5 +1,4 @@
-import "./styles.css"
-
+import './styles.css'
 function HomePage() {
 
   return (
@@ -14,16 +13,15 @@ function HomePage() {
   </div>
   <div class="carousel-inner">
     <div class="carousel-item active">
-      <img  src="public/images/Carousel1.jpg" class="d-block w-100"></img>
-      
-        <div class="carousel-caption d-none d-md-block">
-        <h3>First slide label</h3>
+      <img src="images/Carousel1.jpg" class="d-block w-100"></img>
+      <div class="carousel-caption d-none d-md-block">
+        <h5>First slide label</h5>
         <p>Some representative placeholder content for the first slide.</p>
         </div>
       </div>
     
     <div class="carousel-item">
-      <img  src="public/images/motorcycles.jpg" class="d-block w-100"></img>
+      <img src="images/motorcycles.jpg" class="d-block w-100"></img>
       <div class="carousel-caption d-none d-md-block">
         <h3>Brands</h3>
         <p>Want to learn more about motorcycles and their makers ?!.</p>
@@ -31,7 +29,7 @@ function HomePage() {
       </div>
     </div>
     <div class="carousel-item">
-      <img  src="public/images/marketplace.jpg" class="d-block w-100"></img>
+      <img src="images/marketplace.jpg" class="d-block w-100"></img>
       <div class="carousel-caption d-none d-md-block">
         <h3>Marketplace</h3>
         <p> Looking for riding gear?? Or just that perfect part for your motorcycle??</p>

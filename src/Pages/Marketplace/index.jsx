@@ -42,7 +42,7 @@ function MarketPlacePage() {
     <div className='marketplace-body'>
       <h1>Marketplace</h1>
       
-      <a href={`${apiURL}/create`}>Create a Card</a>      
+      <Link to='/marketplace/create'>Create a Card</Link>      
       <div className='cards'>
 
         <div className='cards-container'>
