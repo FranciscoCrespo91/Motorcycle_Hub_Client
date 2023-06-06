@@ -6,16 +6,20 @@ import { useParams } from "react-router-dom";
 const apiURL = "http://localhost:5005/api/motorcycles";
 
 function BrandsPage() {
-  const brands = useParams();
+  const {brand} = useParams();
+  console.log('BRAND',brand)
   const [allModels, setAllModels] = useState([]);
-  let brandModels = [];
+
+
+
+
 
   useEffect(() => {
-    axios.get(apiURL).then((response) => {
+    axios.get(`${apiURL}/${brand}`).then((response) => {
       setAllModels(response.data);
-      console.log(response.data);
+      console.log('ResponseDATA',response.data);
     });
-  });
+  }, []);
 
   /*  {allModels.map((model)=>{
     if(models.brand==={specificBrand}&& models.brandImg ){brandModels.push(models)};
@@ -24,9 +28,11 @@ function BrandsPage() {
 
   return (
     <div>
+      <h1>{brand} Models</h1>
       {allModels &&
         allModels.map((models) => {
-          <div class="brand-cards" key="models._id">
+          return(
+          <div className="brand-cards" key="models._id">
             <img src={models.modelImg} alt="" />
             <h3>{models.model}</h3>
             <p>{models.year}</p>
@@ -41,7 +47,7 @@ function BrandsPage() {
             <p>{models.frontBrakes}</p>
             <p>{models.rearBrakes}</p>
             <p>{models.height}</p>
-          </div>;
+          </div>)
         })}
     </div>
   );

@@ -14,6 +14,7 @@ import MotorcyclesPage from './Pages/Motorcycles';
 import MarketPlacePage from './Pages/Marketplace';
   import CreateCard from './Pages/Marketplace/createCard';
 import AboutUsPage from './Pages/AboutUs';
+import BrandsPage from './Pages/Brands/index'
 
 
 function App() {
@@ -31,6 +32,7 @@ function App() {
         <Route path="/marketplace" element={<MarketPlacePage/>}/> 
         <Route path="/marketplace/create" element={<CreateCard/>}/>
         <Route path="/motorcycles" element={<MotorcyclesPage/>}/> 
+        <Route path="/motorcycles/:brand" element={<BrandsPage/>}/> 
         <Route path="/aboutus" element={<AboutUsPage/>}/> 
 
         <Route path="/signup" element={<SignUpPage/>}/>

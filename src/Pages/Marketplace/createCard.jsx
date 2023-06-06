@@ -4,8 +4,8 @@ import { AuthContext} from '../../Context/auth.context'
 import { useNavigate } from 'react-router-dom';
 
 const apiURL = 'http://localhost:5005/api'
-const navigate = useNavigate;
 function CreateCard() {
+    const navigate = useNavigate();
     const { user } = useContext(AuthContext); 
 
     const [cardType, setCardType] = useState('');
@@ -57,8 +57,6 @@ function CreateCard() {
     const handleSubmit = (e)=>{
         e.preventDefault();
         
-        console.log('REQUEST BODY',requestBody)
-
         postCard();
         navigate('/marketplace');
 

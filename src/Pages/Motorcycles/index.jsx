@@ -32,8 +32,7 @@ export default function MotorcyclesPage() {
               <IconButton
                 sx={{ color: 'rgba(255, 255, 255, 0.54)' }}
                 aria-label={`info about ${item.title}`}>
-                <Link to={`/motorcycles/brands`}>
-                  {item.brand}
+                <Link to={`/motorcycles/${item.title}`}>          
                   <InfoIcon />
                 </Link> 
                   

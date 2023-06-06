@@ -18,6 +18,7 @@ function UserProfile() {
       let apiResponse = await axios.get(`${apiURL}/profile/${user._id}`)
       
       setUserData(apiResponse.data);
+      console.log(apiResponse.data)
   
     }catch(error){
       console.log('Client API get User Data', error)
