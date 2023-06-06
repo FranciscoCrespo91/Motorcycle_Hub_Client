@@ -24,7 +24,7 @@ function AuthProviderWrapper(props) {
             //Update state variables
             setIsLoggedIn(true);
             setIsLoading(false);
-            setUser(response.data.user);
+            setUser(response.data);
         })
         .catch(()=>{
         // catch possibility whenever it finds an invalid token
@@ -64,6 +64,5 @@ function AuthProviderWrapper(props) {
     </AuthContext.Provider>
     )
 }
-
 
 export {AuthProviderWrapper, AuthContext};

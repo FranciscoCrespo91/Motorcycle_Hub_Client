@@ -1,3 +1,4 @@
+import './styles.css'
 function HomePage() {
 
   return (
@@ -12,14 +13,14 @@ function HomePage() {
   </div>
   <div class="carousel-inner">
     <div class="carousel-item active">
-      <img src="public/images/Carousel1.jpg" class="d-block w-100"></img>
+      <img src="images/Carousel1.jpg" class="d-block w-100"></img>
       <div class="carousel-caption d-none d-md-block">
         <h5>First slide label</h5>
         <p>Some representative placeholder content for the first slide.</p>
       </div>
     </div>
     <div class="carousel-item">
-      <img src="public/images/motorcycles.jpg" class="d-block w-100"></img>
+      <img src="images/motorcycles.jpg" class="d-block w-100"></img>
       <div class="carousel-caption d-none d-md-block">
         <h5>Second slide label</h5>
         <p>Want to check out more motorcycles ?!.</p>
@@ -27,7 +28,7 @@ function HomePage() {
       </div>
     </div>
     <div class="carousel-item">
-      <img src="public/images/marketplace.jpg" class="d-block w-100"></img>
+      <img src="images/marketplace.jpg" class="d-block w-100"></img>
       <div class="carousel-caption d-none d-md-block">
         <h5>Third slide label</h5>
         <p> Looking for that perfect exaust pipe? Or some warmer gloves?</p>
