@@ -15,6 +15,7 @@ import MarketPlacePage from './Pages/Marketplace';
   import CreateCard from './Pages/Marketplace/createCard';
 import AboutUsPage from './Pages/AboutUs';
 import BrandsPage from './Pages/Brands/index'
+import EditCard from './Pages/Marketplace/editCard';
 
 
 function App() {
@@ -31,6 +32,7 @@ function App() {
         <Route path='/' element = {<HomePage/>} />
         <Route path="/marketplace" element={<MarketPlacePage/>}/> 
         <Route path="/marketplace/create" element={<CreateCard/>}/>
+        <Route path='/marketplace/edit/:cardId' element={<EditCard/>}/>
         <Route path="/motorcycles" element={<MotorcyclesPage/>}/> 
         <Route path="/motorcycles/:brand" element={<BrandsPage/>}/> 
         <Route path="/aboutus" element={<AboutUsPage/>}/> 

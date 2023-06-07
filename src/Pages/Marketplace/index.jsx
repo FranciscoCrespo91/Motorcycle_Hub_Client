@@ -2,6 +2,7 @@ import './styles.css'
 import axios from 'axios';
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import {AuthContext} from '../../Context/auth.context'
 
 const apiURL = 'http://localhost:5005/api/marketplace'
 
@@ -10,7 +11,7 @@ function MarketPlacePage() {
   const [requestCards, setRequestCards]=useState([]);
   const [offerCards, setOfferCards]=useState([]);
 
-  
+  //Get all cards function only runs on useEffect
   const getCards = async()=>{
     try {
       const response = await axios.get(apiURL);
@@ -31,7 +32,20 @@ function MarketPlacePage() {
       console.log('Error fectching Cards from API', error);
     }
   }
+  //Handles the delete process of a card
+  const handleDeleteCard = async (cardId)=>{
+    const storedToken = localStorage.getItem('authToken');
+    const headers = {Authorization: `Bearer ${storedToken}`}
+    try {
+      const deletedCard = await axios.delete(`${apiURL}/delete/${cardId}`, {headers:headers});
+      await getCards();
+    }
+    catch(error){
+      console.log('Error Deleting card', error)
+    }
+  }
 
+  // Fetches all the cards from the DB
   useEffect(()=>{
     getCards();
   },[]); 
@@ -57,7 +71,11 @@ function MarketPlacePage() {
                     <div className='card-header-info-section'>
                       <div className='card-title'>
                         <h3>{card.title}</h3>
-                        <Link to='/'>JO</Link>
+                        <Link to={`/marketplace/edit/${card._id}`}>Update Card</Link>
+                        <button onClick={()=>handleDeleteCard(card._id)}>DeleteCard</button>
+                        
+                        {/* <a href={`${apiURL}/delete/${card._id}`}>Delete Card</a> */}
+                        <p>{card.owner.name}</p>
                       </div>
                       <div className='card-info'>
                         <p>Price: {card.price}</p>
