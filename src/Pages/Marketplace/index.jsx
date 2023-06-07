@@ -20,11 +20,10 @@ function MarketPlacePage() {
 
       allCards.map((card)=>{
         if(card.cardType==='request'){
-          console.log('requestCard', card)
           setRequestCards(requestCards => [...requestCards, card]);
         } 
         else{
-         setOfferCards(offerCards => [...offerCards, card]);
+          setOfferCards(offerCards => [...offerCards, card]);
         }
       })
     }
@@ -34,10 +33,11 @@ function MarketPlacePage() {
   }
   //Handles the delete process of a card
   const handleDeleteCard = async (cardId)=>{
-    const storedToken = localStorage.getItem('authToken');
-    const headers = {Authorization: `Bearer ${storedToken}`}
+    
     try {
-      const deletedCard = await axios.delete(`${apiURL}/delete/${cardId}`, {headers:headers});
+      const deletedCard = await axios.delete(`${apiURL}/delete/${cardId}`);
+      setRequestCards([]);
+      setOfferCards([]);
       await getCards();
     }
     catch(error){
