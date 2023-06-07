@@ -1,6 +1,12 @@
+.card-create-form{
+    margin-top: 100px;
+    display: flex;
+    justify-content: center;
+}
 .marketplace-body{
     display: flex;
     flex-direction: column;
+    margin-top: 100px;
 }
 .cards{
     display: flex;
@@ -22,20 +28,25 @@
 .mktplace-card{
     display: flex;
     flex-direction: column;
-    border: 2px solid white;
+    border: 2px solid grey;
     border-radius: 4px;
-    height: 300px;
+    background-color: antiquewhite;
+    height: auto;
     margin: 5px;
     padding: 5px;
 }
 .card-header{
     display: flex;
+    background-color: inherit;
+    border: none;
+    padding: 10px 3px;
     
     
 }
 .card-header-info-section{
     display: flex;
     flex-direction: column;
+    justify-content: space-around;
     width: 100%;
 }
 .card-title{
@@ -43,6 +54,7 @@
     align-items: center;
     justify-content: space-between;
     padding: 0 5px;
+    margin: 0;
 }
 
 .mktplace-card img{
@@ -54,21 +66,25 @@
 .mktplace-card p{
     text-align: left;
     margin: 0;
+    padding: 0 5px;
 }
 .edit-card-btns-box{
-    width: 40%;
+    width: 30%;
+    text-align: end;
 }
 .card-delete-btn{
     padding: 3px 10px;
+    background-color: inherit;
 }
 
 .card-description{
     display: flex;
-    
     align-items: baseline;
     flex-wrap: wrap;
-    height: 100%;    
+    height: auto;    
     width: 100%;
+
+    padding: 0 4%;
 }
 
 form{

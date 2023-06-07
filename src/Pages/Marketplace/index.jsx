@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 import { useContext } from "react";                     
 import { AuthContext} from '../../Context/auth.context'
 
-const apiURL = 'http://localhost:5005/api/marketplace'
+const apiURL = 'https://motorcycle-hub-server.onrender.com/api/marketplace'
 
 function MarketPlacePage() {
   const { isLoggedIn, user } = useContext(AuthContext); 
@@ -68,7 +68,6 @@ function MarketPlacePage() {
         <div className='cards-container'>
           <h2>Riders are Requesting</h2>
           <div className='requests-list'>
-
               {requestCards.length>0? requestCards.map((card)=>{
               return( 
                 <article className='mktplace-card' key={card._id}>
@@ -79,20 +78,21 @@ function MarketPlacePage() {
                         <h3>{card.title}</h3>
                         {isLoggedIn && user._id===card.owner._id && (
                           <div className='edit-card-btns-box'>
-                            <Link to={`/marketplace/edit/${card._id}`}>Update Card</Link>
-                            <button className='card-delete-btn' onClick={()=>handleDeleteCard(card._id)}>DeleteCard</button>
+                            <Link to={`/marketplace/edit/${card._id}`}>✏️</Link>
+                            <button className='card-delete-btn' onClick={()=>handleDeleteCard(card._id)}>🗑️</button>
                           </div>
                         )}
                       </div>
                       <div className='card-info'>
-                        <p>Price: {card.price}</p>
-                        <p>Link: {card.link}</p>
-                        <p>Created: {card.createdAt}</p>
+                        <p><strong>Price:</strong> {card.price}</p>
                       </div>
                     </div>
                   </div>
-                  <p className='card-description'>Description: {card.description}</p>
-                  <p>{card.owner.name}</p>
+                  <p className='card-description'><strong>Description:</strong></p>
+                  <p className='card-description'>{card.description}</p>
+                  <p><strong>Link:</strong> </p>
+                  <p>{card.link}</p>
+                  <p><strong>By:</strong> {card.owner.name} |  <strong>Created:</strong> {card.createdAt.slice(0,10)}</p>
                 </article>
               )
             }): <p>There are no cards yet. You can create a new request by clicking on the Add button on the top of the screen</p>
@@ -103,32 +103,38 @@ function MarketPlacePage() {
 
         <div className='cards-container'>
           <h2>Riders are Offering</h2>
-          {offerCards.length>0? offerCards.map((card)=>{
-              return(
+          <div className='requests-list'>
+              {requestCards.length>0? offerCards.map((card)=>{
+              return( 
                 <article className='mktplace-card' key={card._id}>
                   <div className='card-header'>
                     <img src={card.img}></img>
                     <div className='card-header-info-section'>
                       <div className='card-title'>
-                          <h3>{card.title}</h3>
-                          {isLoggedIn && user._id===card.owner._id && (
-                          <div>
-                            <Link to={`/marketplace/edit/${card._id}`}>Update Card</Link>
-                            <button onClick={()=>handleDeleteCard(card._id)}>DeleteCard</button>
+                        <h3>{card.title}</h3>
+                        {isLoggedIn && user._id===card.owner._id && (
+                          <div className='edit-card-btns-box'>
+                            <Link to={`/marketplace/edit/${card._id}`}>✏️</Link>
+                            <button className='card-delete-btn' onClick={()=>handleDeleteCard(card._id)}>🗑️</button>
                           </div>
                         )}
-                        <p>{card.owner.name}</p>
                       </div>
                       <div className='card-info'>
-                        <p>Price: {card.price}</p>
-                        <p>Link: {card.link}</p>
-                        <p>Created: {card.createdAt}</p>
+                        <p><strong>Price:</strong> {card.price}</p>
                       </div>
                     </div>
                   </div>
+                  <p className='card-description'><strong>Description:</strong></p>
+                  <p className='card-description'>{card.description}</p>
+                  <p><strong>Link:</strong> </p>
+                  <p>{card.link}</p>
+                  <p><strong>By:</strong> {card.owner.name} |  <strong>Created:</strong> {card.createdAt.slice(0,10)}</p>
                 </article>
               )
-            }) : <p>Loading</p>}
+            }): <p>There are no cards yet. You can create a new request by clicking on the Add button on the top of the screen</p>
+            
+            }
+          </div>
         </div>
       </div>
 

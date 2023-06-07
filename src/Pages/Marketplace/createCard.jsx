@@ -1,9 +1,10 @@
+import './styles.css';
 import axios from 'axios'
 import { useState, useContext } from "react"                 
 import { AuthContext} from '../../Context/auth.context'
 import { useNavigate } from 'react-router-dom';
 
-const apiURL = 'http://localhost:5005/api'
+const apiURL = 'https://motorcycle-hub-server.onrender.com/api'
 
 function CreateCard() {
     const navigate = useNavigate();
@@ -64,7 +65,7 @@ function CreateCard() {
     }
 
   return (
-    <div>
+    <div className='card-create-form'>
         <form onSubmit={handleSubmit}>
             
             <label>Type of Card:</label>
