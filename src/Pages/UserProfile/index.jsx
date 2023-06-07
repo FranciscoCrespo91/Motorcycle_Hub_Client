@@ -6,7 +6,7 @@ import { AuthContext} from '../../Context/auth.context'
 import UserCard from "../../Components/UserCard";
 import './styles.css'
 
-const apiURL = 'http://localhost:5005/api';
+const apiURL = 'https://motorcycle-hub-server.onrender.com/api';
 
 
 function UserProfile() {
@@ -34,14 +34,16 @@ function UserProfile() {
   return (
     <div>
 
-      <section className="user">
+      <section className="profile-user-card">
         {userData &&(
           <h1 className="title"> {userData.name}'s Profile</h1>)}
 
         <div>
           {userData &&(
-            <UserCard userData={userData}/>
-
+            <div>
+                <UserCard userData={userData}/>
+                <a href={`/profile/edit/${userData._id}`}>Update Profile</a>
+            </div>
          )}
           {!userData && isLoggedIn && (
             <div>
@@ -56,8 +58,14 @@ function UserProfile() {
         </div>
       </section>
 
-      <section className="user-motorcycle"></section>
-      <section className="marketplace"></section>
+      <section className="profile-user-motorcycle">
+          <div>
+            <a href="#">Create a Motorcycle</a>
+            User Motorcycles go here
+          </div>
+
+      </section>
+      <section className="profile-marketplace">User Marketplace cards go here</section>
 
     </div>
 

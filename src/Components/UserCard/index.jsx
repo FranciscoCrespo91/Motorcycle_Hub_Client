@@ -1,7 +1,7 @@
 import "./styles.css"
 
 function UserCard(props) {
-    const {name, email, img, bio, motorcycles, cards} = props.userData
+    const {email, img, bio, motorcycles, cards} = props.userData
 
   return (  
     <div className="user-card">
@@ -9,19 +9,13 @@ function UserCard(props) {
        
         < div className="user-card-info">
             
-            <p>{bio}</p>
-            <p>{email}</p>
+            <p>Bio: {bio}</p>
+            <p>Email: {email}</p>
 
         </div>
 
-        <div>
-            <a href="#">Create a Motorcycle</a>
-            {motorcycles}
-        </div>
-        <div>
-            {cards}
-        </div>
-        
+    
+     
     </div>
   )
 }

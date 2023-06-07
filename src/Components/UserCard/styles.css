@@ -1,4 +1,14 @@
 .user-card{
     display: flex;
     flex-direction: row;
+    border-style: solid;
+    
+    margin-left: 2.5%;
+    margin-right: 2.5%;
+    }
+
+.user-card-info{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }

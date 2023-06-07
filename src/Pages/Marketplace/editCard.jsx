@@ -3,7 +3,7 @@ import axios from 'axios'
 import { useEffect, useState } from "react"
 
 
-const apiURL = 'http://localhost:5005/api'
+const apiURL = 'https://motorcycle-hub-server.onrender.com/api'
 
 function EditCard() {
     const {cardId}= useParams();
