@@ -4,6 +4,7 @@ import { useContext } from "react";
 import { AuthContext} from '../../Context/auth.context'
 
 import UserCard from "../../Components/UserCard";
+import './styles.css'
 
 const apiURL = 'http://localhost:5005/api';
 
@@ -32,25 +33,32 @@ function UserProfile() {
 
   return (
     <div>
-      <h1>UserProfile</h1>
 
-      <div>
+      <section className="user">
         {userData &&(
-          <UserCard userData={userData}/>
+          <h1 className="title"> {userData.name}'s Profile</h1>)}
 
-        )}
-        {!userData && isLoggedIn && (
-          <div>
-            <p>Loading</p>
-          </div>
-        )}
-        {!isLoggedIn && (
-          <div>
-            <p>Please <a href="/login">Login</a> to view your profile again</p>
-          </div>
-        ) }
-      </div>
-    
+        <div>
+          {userData &&(
+            <UserCard userData={userData}/>
+
+         )}
+          {!userData && isLoggedIn && (
+            <div>
+              <p>Loading</p>
+            </div>
+          )}
+          {!isLoggedIn && (
+            <div>
+              <p>Please <a href="/login">Login</a> to view your profile again</p>
+            </div>
+          ) }
+        </div>
+      </section>
+
+      <section className="user-motorcycle"></section>
+      <section className="marketplace"></section>
+
     </div>
 
   )

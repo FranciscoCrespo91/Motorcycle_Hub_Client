@@ -2,3 +2,24 @@
     background-color: rgba(22, 21, 21, 0.5);
 }
 
+.links{
+    color: white;
+}
+.carousel-img{
+width: 80vw;
+height: 100vh;
+margin-top: 100px;
+}
+/* .carousel-inner{
+    background-color: rgb(238,232,232);
+} */
+.carousel-control-prev-icon{
+    background-color:rgb(238,232,232,0.5);
+    height: 100vh;
+    margin-top: 100px;
+}
+.carousel-control-next-icon{
+    background-color:rgb(238,232,232,0.5);
+    height: 100vh;
+    margin-top: 100px;
+}

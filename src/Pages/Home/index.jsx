@@ -13,7 +13,7 @@ function HomePage() {
   </div>
   <div className="carousel-inner">
     <div className="carousel-item active">
-      <img src="images/Carousel1.jpg" className="d-block w-100"></img>
+      <img src="images/Carousel2.jpg" className="carousel-img"></img>
       <div className="carousel-caption d-none d-md-block">
         <h5>First slide label</h5>
         <p>Some representative placeholder content for the first slide.</p>
@@ -21,19 +21,19 @@ function HomePage() {
       </div>
     
     <div className="carousel-item">
-      <img src="images/motorcycles.jpg" className="d-block w-100"></img>
+      <img src="images/motorcycles.jpg" className="carousel-img"></img>
       <div className="carousel-caption d-none d-md-block">
         <h3>Brands</h3>
         <p>Want to learn more about motorcycles and their makers ?!.</p>
-        <a href="/motorcycles">Check our list of brands here!!</a>
+        <a className="links" href="/motorcycles">Check our list of brands here!!</a>
       </div>
     </div>
     <div className="carousel-item">
-      <img src="images/marketplace.jpg" className="d-block w-100"></img>
+      <img src="images/marketplace.jpg" className="carousel-img"></img>
       <div className="carousel-caption d-none d-md-block">
         <h3>Marketplace</h3>
         <p> Looking for riding gear?? Or just that perfect part for your motorcycle??</p>
-        <a href="/marketplace">Check out our user based Marketplace</a>
+        <a className="links" href="/marketplace">Check out our user based Marketplace</a>
       </div>
     </div>
   </div>

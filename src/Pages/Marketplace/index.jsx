@@ -81,7 +81,7 @@ function MarketPlacePage() {
                         <button onClick={()=>handleDeleteCard(card._id)}>DeleteCard</button>
                         
                         {/* <a href={`${apiURL}/delete/${card._id}`}>Delete Card</a> */}
-                        <p>{card.owner.name}</p>
+                        {/* <p>{card.owner.name}</p> */}
                       </div>
                       <div className='card-info'>
                         <p>Price: {card.price}</p>

@@ -1,14 +1,14 @@
-
+import "./styles.css"
 
 function UserCard(props) {
     const {name, email, img, bio, motorcycles, cards} = props.userData
 
-  return (
+  return (  
     <div className="user-card">
         <img src={img}></img>
        
-        <div>
-            <h3>{name}</h3>
+        < div className="user-card-info">
+            
             <p>{bio}</p>
             <p>{email}</p>
 

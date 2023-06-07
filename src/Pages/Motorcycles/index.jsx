@@ -14,19 +14,19 @@ import InfoIcon from '@mui/icons-material/Info';
 export default function MotorcyclesPage() {
 
   return (
-    <ImageList sx={{ width: 1000, height: 1000 }}>
-      <ImageListItem key="Subheader"   >
-      
-      </ImageListItem>
+    <ImageList sx={{}}>
+     
       {itemData.map((item) => (
         <ImageListItem key={item.img}>
           <img
-            src={`${item.img}?w=248&fit=crop&auto=format`}
-            srcSet={`${item.img}?w=248&fit=crop&auto=format&dpr=2 2x`}
+            className="list-img"
+            src={`${item.img}?w=248&fit=contain&auto=format`}
+            srcSet={`${item.img}?w=248&fit=contain&auto=format&dpr=2 2x`}
             alt={item.title}
             loading="lazy"
           />
           <ImageListItemBar
+            className="list-item-bar"
             title={item.title}
              actionIcon={
               <IconButton

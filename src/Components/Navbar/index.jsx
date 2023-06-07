@@ -14,6 +14,8 @@ import MenuItem from "@mui/material/MenuItem";
 import AdbIcon from "@mui/icons-material/Adb";
 import TwoWheelerIcon from '@mui/icons-material/TwoWheeler';
 
+import "./styles.css"
+
 const pages = ["motorcycles", "marketplace", "aboutus"];
 const settings = ["profile", "login", "logout"];
 
@@ -37,11 +39,12 @@ function ResponsiveAppBar() {
   };
 
   return (
-    <AppBar position="static">
+    <AppBar position="absolute">
       <Container maxWidth="xl">
         <Toolbar disableGutters>
           <TwoWheelerIcon sx={{ display: { xs: "none", md: "flex" }, mr: 1 }} />
           <Typography
+            className="navbar-links"
             variant="h6"
             noWrap
             component="a"
@@ -72,6 +75,7 @@ function ResponsiveAppBar() {
             </IconButton>
             <Menu
               id="menu-appbar"
+              
               anchorEl={anchorElNav}
               anchorOrigin={{
                 vertical: "bottom",
@@ -106,6 +110,7 @@ function ResponsiveAppBar() {
               letterSpacing: ".3rem",
               color: "inherit",
               textDecoration: "none",
+              
             }}
           >
             Motorcycle-Hub
@@ -114,6 +119,7 @@ function ResponsiveAppBar() {
           <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
             {pages.map((page) => (
               <Button
+                className="navbar-links"
                 key={page}
                 component="a"
                 href={`/${page}`}

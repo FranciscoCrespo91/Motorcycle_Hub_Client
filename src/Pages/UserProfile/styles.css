@@ -1,0 +1,9 @@
+.title{
+   text-align: start;
+}
+.user{
+    display: flex;
+    flex-direction: column;
+    border-style: solid;
+    margin-top: 5%;
+}

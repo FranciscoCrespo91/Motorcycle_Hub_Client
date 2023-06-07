@@ -2,6 +2,7 @@ import "./styles.css";
 import axios from "axios";
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
+import "./styles.css"
 
 const apiURL = "http://localhost:5005/api/motorcycles";
 
