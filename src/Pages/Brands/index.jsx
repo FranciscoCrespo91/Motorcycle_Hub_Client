@@ -31,6 +31,8 @@ function BrandsPage() {
       <h1>{brand} Models</h1>
       {allModels &&
         allModels.map((models) => {
+          if(models.modelImg!=="https://freesvg.org/img/motorcycleicon.png")
+          {
           return(
           <div className="brand-cards" key="models._id">
             <img src={models.modelImg} alt="" />
@@ -47,7 +49,7 @@ function BrandsPage() {
             <p>Front Brakes: {models.frontBrakes}</p>
             <p>Rear Brakes: {models.rearBrakes}</p>
             <p>Seat Height: {models.height}</p>
-          </div>)
+          </div>)}
         })}
     </div>
   );
