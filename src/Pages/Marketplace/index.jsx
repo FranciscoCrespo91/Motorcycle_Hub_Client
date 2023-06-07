@@ -57,7 +57,9 @@ function MarketPlacePage() {
                     <div className='card-header-info-section'>
                       <div className='card-title'>
                         <h3>{card.title}</h3>
-                        <Link to='/'>JO</Link>
+                        <Link to={`/marketplace/edit/${card._id}`}>Update Card</Link>
+                        <a href='#'>Delete Card</a>
+                        <p>{card.owner.name}</p>
                       </div>
                       <div className='card-info'>
                         <p>Price: {card.price}</p>

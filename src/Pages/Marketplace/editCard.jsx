@@ -1,14 +1,16 @@
+import { useParams, useNavigate } from "react-router-dom";
 import axios from 'axios'
-import { useState, useContext } from "react"                 
-import { AuthContext} from '../../Context/auth.context'
-import { useNavigate } from 'react-router-dom';
+import { useEffect, useState } from "react"
+
 
 const apiURL = 'http://localhost:5005/api'
 
-function CreateCard() {
+function EditCard() {
+    const {cardId}= useParams();
+    console.log('cardId', cardId)
+    let cardInfo;
     const navigate = useNavigate();
-    const { user } = useContext(AuthContext); 
-
+    
     const [cardType, setCardType] = useState('');
     const [contentType, setContentType] = useState('');
     const [title, setTitle] = useState('');
@@ -16,7 +18,25 @@ function CreateCard() {
     const [img, setImg] = useState('');
     const [link, setLink] = useState('');
     const [price, setPrice] = useState('');
+    
+    const getCardInfo = async()=>{
+        try {
+            const apiResponse = await axios.get(`${apiURL}/marketplace/${cardId}`)
+            cardInfo = apiResponse.data
+            setCardType(cardInfo.cardType)
+            setContentType(cardInfo.contentType)
+            setTitle(cardInfo.title)
+            setDescription(cardInfo.description)
+            setImg(cardInfo.img)
+            setLink(cardInfo.link)
+            setPrice(cardInfo.price)
 
+            console.log('CARD-INFO', cardInfo)
+        } 
+        catch(error){
+            console.log('Error getting Specific Card from API', error)
+        }
+    }
 
     const handleCardType = (e)=>{setCardType(e.target.value)};
     const handleContentType = (e)=>{setContentType(e.target.value)};
@@ -34,12 +54,11 @@ function CreateCard() {
         img: img,
         link: link,
         price: price,
-        owner: user._id
     };
+
     const postCard = async()=>{
         try {
-            
-            await axios.post(`${apiURL}/marketplace/create`, requestBody)
+            await axios.put(`${apiURL}/marketplace/edit/${cardId}`, requestBody)
             console.log('cardPosted')
             setCardType('');
             setContentType('');
@@ -48,7 +67,6 @@ function CreateCard() {
             setImg('');
             setLink('');
             setPrice('');
-
         }
         catch(error){
             console.log('Error posting form', error)
@@ -62,9 +80,17 @@ function CreateCard() {
         navigate('/marketplace');
 
     }
+useEffect (()=>{
+    getCardInfo()
+},[])
 
   return (
+  <div>
+    <h1>Update Card</h1>
     <div>
+        {
+            
+
         <form onSubmit={handleSubmit}>
             
             <label>Type of Card:</label>
@@ -96,11 +122,14 @@ function CreateCard() {
             <label>Price:</label>
             <input type="text" name='price' value={price} onChange={handlePrice}/>
 
-            <button type='submit'>Create Card</button>
+            <button type='submit'>Update Card</button>
         </form>
+        }
     
     </div>
+
+  </div>
   )
 }
 
-export default CreateCard
+export default EditCard
