@@ -9,6 +9,7 @@ const apiURL = 'http://localhost:5005/api/marketplace'
 
 function MarketPlacePage() {
   const { isLoggedIn, user } = useContext(AuthContext); 
+
   const [cards, setCards]=useState([]);
   const [requestCards, setRequestCards]=useState([]);
   const [offerCards, setOfferCards]=useState([]);
@@ -37,7 +38,7 @@ function MarketPlacePage() {
   const handleDeleteCard = async (cardId)=>{
     
     try {
-      const deletedCard = await axios.delete(`${apiURL}/delete/${cardId}`);
+      await axios.delete(`${apiURL}/delete/${cardId}`);
       setRequestCards([]);
       setOfferCards([]);
       await getCards();
@@ -60,7 +61,7 @@ function MarketPlacePage() {
       {isLoggedIn &&(
       <Link to='/marketplace/create'>Create a Card</Link>)} 
       {!isLoggedIn && (
-        <p>You need to Login to be able to Create Cards</p>
+        <p>You need to <a href='/login'>Login</a> to be able to Create, Edit or Delete Cards</p>
       )}     
       <div className='cards'>
 
@@ -76,12 +77,12 @@ function MarketPlacePage() {
                     <div className='card-header-info-section'>
                       <div className='card-title'>
                         <h3>{card.title}</h3>
-                        
-                        <Link to={`/marketplace/edit/${card._id}`}>Update Card</Link>
-                        <button onClick={()=>handleDeleteCard(card._id)}>DeleteCard</button>
-                        
-                        {/* <a href={`${apiURL}/delete/${card._id}`}>Delete Card</a> */}
-                        {/* <p>{card.owner.name}</p> */}
+                        {isLoggedIn && user._id===card.owner._id && (
+                          <div className='edit-card-btns-box'>
+                            <Link to={`/marketplace/edit/${card._id}`}>Update Card</Link>
+                            <button className='card-delete-btn' onClick={()=>handleDeleteCard(card._id)}>DeleteCard</button>
+                          </div>
+                        )}
                       </div>
                       <div className='card-info'>
                         <p>Price: {card.price}</p>
@@ -91,9 +92,12 @@ function MarketPlacePage() {
                     </div>
                   </div>
                   <p className='card-description'>Description: {card.description}</p>
+                  <p>{card.owner.name}</p>
                 </article>
               )
-            }): <p>There are no cards yet. You can create a new request by clicking on the Add button on the top of the screen</p>}
+            }): <p>There are no cards yet. You can create a new request by clicking on the Add button on the top of the screen</p>
+            
+            }
           </div>
         </div>
 
@@ -102,13 +106,26 @@ function MarketPlacePage() {
           {offerCards.length>0? offerCards.map((card)=>{
               return(
                 <article className='mktplace-card' key={card._id}>
-                  <img src={card.img}></img>
-                  <h3>{card.title}</h3>
-                  <Link to=''></Link>
-                  <p>Price: {card.price}</p>
-                  <p>Link: {card.link}</p>
-                  <p>Created: {card.createdAt}</p>
-                  <p className='card-description'>Description: {card.description}</p>
+                  <div className='card-header'>
+                    <img src={card.img}></img>
+                    <div className='card-header-info-section'>
+                      <div className='card-title'>
+                          <h3>{card.title}</h3>
+                          {isLoggedIn && user._id===card.owner._id && (
+                          <div>
+                            <Link to={`/marketplace/edit/${card._id}`}>Update Card</Link>
+                            <button onClick={()=>handleDeleteCard(card._id)}>DeleteCard</button>
+                          </div>
+                        )}
+                        <p>{card.owner.name}</p>
+                      </div>
+                      <div className='card-info'>
+                        <p>Price: {card.price}</p>
+                        <p>Link: {card.link}</p>
+                        <p>Created: {card.createdAt}</p>
+                      </div>
+                    </div>
+                  </div>
                 </article>
               )
             }) : <p>Loading</p>}

@@ -16,6 +16,7 @@
 .requests-list{
     display: flex;
     flex-direction: column;
+    
 }
 
 .mktplace-card{
@@ -48,9 +49,17 @@
     width: 150px;
     margin: 3px;
     border-radius: 5px;
+    object-fit: contain;
 }
 .mktplace-card p{
     text-align: left;
+    margin: 0;
+}
+.edit-card-btns-box{
+    width: 40%;
+}
+.card-delete-btn{
+    padding: 3px 10px;
 }
 
 .card-description{
