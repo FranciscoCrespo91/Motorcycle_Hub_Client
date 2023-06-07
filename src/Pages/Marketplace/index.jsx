@@ -2,11 +2,13 @@ import './styles.css'
 import axios from 'axios';
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import {AuthContext} from '../../Context/auth.context'
+import { useContext } from "react";                     
+import { AuthContext} from '../../Context/auth.context'
 
 const apiURL = 'http://localhost:5005/api/marketplace'
 
 function MarketPlacePage() {
+  const { isLoggedIn, user } = useContext(AuthContext); 
   const [cards, setCards]=useState([]);
   const [requestCards, setRequestCards]=useState([]);
   const [offerCards, setOfferCards]=useState([]);
@@ -55,8 +57,11 @@ function MarketPlacePage() {
 
     <div className='marketplace-body'>
       <h1>Marketplace</h1>
-      
-      <Link to='/marketplace/create'>Create a Card</Link>      
+      {isLoggedIn &&(
+      <Link to='/marketplace/create'>Create a Card</Link>)} 
+      {!isLoggedIn && (
+        <p>You need to Login to be able to Create Cards</p>
+      )}     
       <div className='cards'>
 
         <div className='cards-container'>
@@ -71,6 +76,7 @@ function MarketPlacePage() {
                     <div className='card-header-info-section'>
                       <div className='card-title'>
                         <h3>{card.title}</h3>
+                        
                         <Link to={`/marketplace/edit/${card._id}`}>Update Card</Link>
                         <button onClick={()=>handleDeleteCard(card._id)}>DeleteCard</button>
                         
