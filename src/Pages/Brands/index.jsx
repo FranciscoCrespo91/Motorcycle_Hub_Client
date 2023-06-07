@@ -34,19 +34,19 @@ function BrandsPage() {
           return(
           <div className="brand-cards" key="models._id">
             <img src={models.modelImg} alt="" />
-            <h3>{models.model}</h3>
-            <p>{models.year}</p>
-            <p>{models.type}</p>
-            <p>{models.engine}</p>
-            <p>{models.boreStroke}</p>
-            <p>{models.fuelCapacity}</p>
-            <p>{models.frontSuspension}</p>
-            <p>{models.rearSuspension}</p>
-            <p>{models.frontTire}</p>
-            <p>{models.rearTire}</p>
-            <p>{models.frontBrakes}</p>
-            <p>{models.rearBrakes}</p>
-            <p>{models.height}</p>
+            <h3>Model: {models.model}</h3>
+            <p>Production Year: {models.year}</p>
+            <p>Type: {models.type}</p>
+            <p>Engine: {models.engine}</p>
+            <p>Bore Stroke: {models.boreStroke}</p>
+            <p>Fuel Capacity: {models.fuelCapacity}</p>
+            <p>Front Suspension: {models.frontSuspension}</p>
+            <p>Rear Suspension: {models.rearSuspension}</p>
+            <p>Front Tire: {models.frontTire}</p>
+            <p>Rear Tire: {models.rearTire}</p>
+            <p>Front Brakes: {models.frontBrakes}</p>
+            <p>Rear Brakes: {models.rearBrakes}</p>
+            <p>Seat Height: {models.height}</p>
           </div>)
         })}
     </div>
