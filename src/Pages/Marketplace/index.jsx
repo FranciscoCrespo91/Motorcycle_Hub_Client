@@ -50,6 +50,8 @@ function MarketPlacePage() {
 
   // Fetches all the cards from the DB
   useEffect(()=>{
+    setRequestCards([]);
+    setOfferCards([])
     getCards();
   },[]); 
   
@@ -91,7 +93,7 @@ function MarketPlacePage() {
                   <p className='card-description'><strong>Description:</strong></p>
                   <p className='card-description'>{card.description}</p>
                   <p><strong>Link:</strong> </p>
-                  <p>{card.link}</p>
+                  <a href={card.link} style={{textAlign:'left', paddingLeft:'5px'}}>{card.link}</a>
                   <p><strong>By:</strong> {card.owner.name} |  <strong>Created:</strong> {card.createdAt.slice(0,10)}</p>
                 </article>
               )
@@ -127,7 +129,7 @@ function MarketPlacePage() {
                   <p className='card-description'><strong>Description:</strong></p>
                   <p className='card-description'>{card.description}</p>
                   <p><strong>Link:</strong> </p>
-                  <p>{card.link}</p>
+                  <a href={card.link} style={{textAlign:'left', paddingLeft:'5px'}}>{card.link}</a>
                   <p><strong>By:</strong> {card.owner.name} |  <strong>Created:</strong> {card.createdAt.slice(0,10)}</p>
                 </article>
               )
