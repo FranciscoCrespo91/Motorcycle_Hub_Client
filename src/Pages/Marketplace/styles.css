@@ -1,12 +1,11 @@
 .card-create-form{
-    margin-top: 100px;
     display: flex;
     justify-content: center;
 }
 .marketplace-body{
     display: flex;
     flex-direction: column;
-    margin-top: 100px;
+   
 }
 .cards{
     display: flex;
@@ -94,4 +93,10 @@ form{
     flex-direction: column;
     align-items: center;
     width: 50%;
+}
+
+.login-text{
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
 }

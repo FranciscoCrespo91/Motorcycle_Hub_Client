@@ -1,0 +1,14 @@
+.about-us{
+    display: flex;
+    flex-direction: column;
+}
+.students{
+    display: flex;
+}
+.johnny{
+    margin: 50px 50px 50px 50px;
+
+}
+.xico{
+    margin: 50px 50px 50px 50px;
+}

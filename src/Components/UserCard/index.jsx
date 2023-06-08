@@ -5,7 +5,7 @@ function UserCard(props) {
 
   return (  
     <div className="user-card">
-        <img src={img}></img>
+        <img className="user-img" src={img}></img>
        
         < div className="user-card-info">
             

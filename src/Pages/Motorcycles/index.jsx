@@ -76,6 +76,7 @@ export default function MotorcyclesPage() {
             title={item.title}
             actionIcon={
               <IconButton
+                className="info-button"
                 sx={{ color: "rgba(255, 255, 255, 0.54)" }}
                 aria-label={`info about ${item.title}`}
               >

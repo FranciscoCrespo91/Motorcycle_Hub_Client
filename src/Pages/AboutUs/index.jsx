@@ -4,10 +4,10 @@ import versys from '/images/UserProfile/20221126124035_IMG_0272.jpeg'
 function AboutUsPage() {
   return (
 
-    <div>
+    <div className='about-us'>
         <h1>Hello! We are João Madeira and Francisco Crespo</h1>
-        <section>
-          <article>
+        <section className='students'>
+          <article className='johnny'>
             <img src=''></img>
             <h3>João Madeira</h3>
             <p><strong>About:</strong></p>
@@ -18,7 +18,7 @@ function AboutUsPage() {
             <p><strong>GitHub:</strong><a href='https://github.com/jodmadeira'>  /jodmadeira</a></p>
             <p><strong>LinkedIn:</strong><a href='https://linkedin.com/in/joaoddmadeira'>  /joaoddmadeira</a></p>
           </article>
-          <article>
+          <article className='xico'>
           <img src=''></img>
             <h3>Franciso Crespo</h3>
             <p><strong>About:</strong></p>

@@ -1,35 +1,35 @@
-.carousel-caption{
-    background-color: rgba(22, 21, 21, 0.5);
+.carousel-caption {
+  background-color: rgba(22, 21, 21, 0.5);
 }
 
-.links{
-    color: white;
+.links {
+  color: white;
 }
-.carousel-img{
-width: 80vw;
-height: 80vh;
-border-radius: 7px;
-
+.carousel-img {
+  width: 90vw;
+  height: 90vh;
+  border-radius: 7px;
 }
-.carousel-control-prev{
-    display: flex;
-    justify-content:start;
+.carousel-control-prev {
+  display: flex;
+  justify-content: start;
 }
-.carousel-control-prev-icon{
-    background-color:rgb(238,232,232,0.5);
-    height: 10%;
+.carousel-control-prev-icon {
+  background-color: rgb(238, 232, 232, 0.5);
+  height: 10%;
 }
-.carousel-control-next{
-    display: flex;
-    justify-content: end;
+.carousel-control-next {
+  display: flex;
+  justify-content: end;
 }
-.carousel-control-next-icon{
-    background-color:rgb(238,232,232,0.5);
-    height: 10%;
-    
+.carousel-control-next-icon {
+  background-color: rgb(238, 232, 232, 0.5);
+  height: 10%;
 }
 
-#carouselExampleCaptions{
-    border-radius: 7px;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.8), 0 6px 20px 0 rgba(0, 0, 0, 0.8)
+#carouselExampleCaptions {
+  width: 90vw;
+  height: 90vh;
+  border-radius: 7px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.8), 0 6px 20px 0 rgba(0, 0, 0, 0.8);
 }
