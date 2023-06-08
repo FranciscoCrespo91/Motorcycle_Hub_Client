@@ -51,6 +51,7 @@ function BrandsPage() {
             <p>Rear Brakes: {models.rearBrakes}</p>
             <p>Seat Height: {models.height}</p>
           </div>)}
+          <hr></hr>
         })}
     </div>
   );

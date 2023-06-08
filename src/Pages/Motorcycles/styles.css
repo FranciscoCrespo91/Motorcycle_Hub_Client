@@ -1,6 +1,4 @@
-
 .MuiImageList-root{
-    margin-top: 100px;
     margin-left: 2.5%;
     margin-right: 2.5%;
     display: grid;
@@ -17,9 +15,12 @@
     object-fit: contain !important;
     margin:2%;
     padding: 10%;
-    height: 500px !important;
+    height: 400px !important;
 }
 
 .list-item-bar{
 margin:2.5%;
+width: 80%;
+display: flex;
+justify-content: center;
 }

@@ -7,19 +7,29 @@
 }
 .carousel-img{
 width: 80vw;
-height: 100vh;
-margin-top: 100px;
+height: 80vh;
+border-radius: 7px;
+
 }
-/* .carousel-inner{
-    background-color: rgb(238,232,232);
-} */
+.carousel-control-prev{
+    display: flex;
+    justify-content:start;
+}
 .carousel-control-prev-icon{
     background-color:rgb(238,232,232,0.5);
-    height: 100vh;
-    margin-top: 100px;
+    height: 10%;
+}
+.carousel-control-next{
+    display: flex;
+    justify-content: end;
 }
 .carousel-control-next-icon{
     background-color:rgb(238,232,232,0.5);
-    height: 100vh;
-    margin-top: 100px;
+    height: 10%;
+    
+}
+
+#carouselExampleCaptions{
+    border-radius: 7px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.8), 0 6px 20px 0 rgba(0, 0, 0, 0.8)
 }
