@@ -17,7 +17,7 @@ import TwoWheelerIcon from '@mui/icons-material/TwoWheeler';
 import "./styles.css"
 
 const pages = ["motorcycles", "marketplace", "about us"];
-const settings = ["profile", "login", "signup", "logout"];
+const settings = ["Profile", "Login", "Sign Up", "Logout"];
 
 function ResponsiveAppBar() {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
@@ -159,7 +159,7 @@ function ResponsiveAppBar() {
                   key={setting}
                   onClick={handleCloseUserMenu}
                   component="a"
-                  href={`/${setting}`}
+                  href={`/${setting.trim().toLowerCase()}`}
                   textAlign="center"
                 >
                   {setting}
