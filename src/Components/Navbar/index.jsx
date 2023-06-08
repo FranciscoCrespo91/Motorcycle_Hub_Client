@@ -122,7 +122,7 @@ function ResponsiveAppBar() {
                 className="navbar-links"
                 key={page}
                 component="a"
-                href={`/${page}`}
+                href={`/${page.replaceAll(' ', '').toLowerCase()}`}
                 textAlign="center"
                 onClick={handleCloseNavMenu}
                 sx={{ my: 2, color: "white", display: "block" }}
@@ -159,7 +159,7 @@ function ResponsiveAppBar() {
                   key={setting}
                   onClick={handleCloseUserMenu}
                   component="a"
-                  href={`/${setting.trim().toLowerCase()}`}
+                  href={`/${setting.replaceAll(' ', '').toLowerCase()}`}
                   textAlign="center"
                 >
                   {setting}
