@@ -16,6 +16,7 @@ function UserProfile() {
   
   const getUserData = async ()=>{
     try {
+      console.log(user)
       let apiResponse = await axios.get(`${apiURL}/profile/${user._id}`)
       
       setUserData(apiResponse.data);
