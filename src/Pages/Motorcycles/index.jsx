@@ -15,12 +15,12 @@ export default function MotorcyclesPage() {
 
   const itemData = [
     {
-      img: './public/images/brands/honda-logo.jpg',
+      img: 'public/images/brands/honda-logo.jpg',
       title: 'Honda',
   
     },
     {
-      img: './public/images/brands/kawasaki-logo.png',
+      img: '../public/images/brands/kawasaki-logo.png',
       title: 'Kawasaki',
       
     },
