@@ -1,25 +1,35 @@
-.LoginPage
-{
-    background-image: url('https://th.bing.com/th/id/R.4f74e4c381442c0b0dd1513be4e661c5?rik=PXO7zvAP9lU1Tw&pid=ImgRaw&r=0');
+.signup-page{
+    background-image: url('https://wallpaperaccess.com/full/1225546.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-
+    text-align: center;
     height: 110vh;
     width: 100vw;
 }
-.LoginPage form{
+.signup-form{
+    position: relative;
+    right: 20%;
+    color: white;
+}
+.signup-form h1{
+    text-shadow: 1px 1px 2px black, 0 0 25px rgb(1, 1, 31), 0 0 5px rgb(1, 1, 22);
+}
+
+
+.signup-page form{
     width: fit-content;
 }
+
 .input-fields{
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.login-btn{
+.signup-btn{
     margin: 10px;
 }
