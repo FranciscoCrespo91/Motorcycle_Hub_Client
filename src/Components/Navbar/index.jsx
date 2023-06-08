@@ -17,7 +17,7 @@ import TwoWheelerIcon from '@mui/icons-material/TwoWheeler';
 import "./styles.css"
 
 const pages = ["motorcycles", "marketplace", "about us"];
-const settings = ["profile", "login", "logout"];
+const settings = ["profile", "login", "signup", "logout"];
 
 function ResponsiveAppBar() {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
@@ -135,7 +135,7 @@ function ResponsiveAppBar() {
           <Box sx={{ flexGrow: 0 }}>
             <Tooltip title="Open settings">
               <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
-                <Avatar alt="Remy Sharp" src="public/images/user.png" />
+                <Avatar alt="Remy Sharp" src="/images/user.png" />
               </IconButton>
             </Tooltip>
             <Menu
