@@ -4,7 +4,7 @@ import { useState, useContext } from "react"
 import { AuthContext} from '../../Context/auth.context'
 import { useNavigate } from 'react-router-dom';
 
-const apiURL = 'https://motorcycle-hub-server.onrender.com/api'
+const apiURL = import.meta.env.VITE_APP_SERVER_URL;
 
 function CreateCard() {
     const navigate = useNavigate();

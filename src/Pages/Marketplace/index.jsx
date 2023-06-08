@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 import { useContext } from "react";                     
 import { AuthContext} from '../../Context/auth.context'
 
-const apiURL = 'https://motorcycle-hub-server.onrender.com/api/marketplace'
+const apiURL = import.meta.env.VITE_APP_SERVER_URL;
 
 function MarketPlacePage() {
   const { isLoggedIn, user } = useContext(AuthContext); 
@@ -17,7 +17,7 @@ function MarketPlacePage() {
   //Get all cards function only runs on useEffect
   const getCards = async()=>{
     try {
-      const response = await axios.get(apiURL);
+      const response = await axios.get(`${apiURL}/marketplace`);
       const allCards = response.data;
       setCards(allCards)
 
@@ -38,7 +38,7 @@ function MarketPlacePage() {
   const handleDeleteCard = async (cardId)=>{
     
     try {
-      await axios.delete(`${apiURL}/delete/${cardId}`);
+      await axios.delete(`${apiURL}/marketplace/delete/${cardId}`);
       setRequestCards([]);
       setOfferCards([]);
       await getCards();
