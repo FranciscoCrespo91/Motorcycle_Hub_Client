@@ -12,7 +12,7 @@ import UserProfile from './Pages/UserProfile';
 import HomePage from './Pages/Home';
 import MotorcyclesPage from './Pages/Motorcycles';
 import MarketPlacePage from './Pages/Marketplace';
-  import CreateCard from './Pages/Marketplace/createCard';
+import CreateCard from './Pages/Marketplace/createCard';
 import AboutUsPage from './Pages/AboutUs';
 import BrandsPage from './Pages/Brands/index'
 import EditCard from './Pages/Marketplace/editCard';
