@@ -6,7 +6,7 @@ import { AuthContext} from '../../Context/auth.context'
 import UserCard from "../../Components/UserCard";
 import './styles.css'
 
-const apiURL = 'https://motorcycle-hub-server.onrender.com/api';
+const apiURL = import.meta.env.VITE_APP_SERVER_URL;
 
 
 function UserProfile() {

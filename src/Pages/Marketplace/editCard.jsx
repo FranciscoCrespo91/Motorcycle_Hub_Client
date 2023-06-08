@@ -3,7 +3,7 @@ import axios from 'axios'
 import { useEffect, useState } from "react"
 
 
-const apiURL = 'https://motorcycle-hub-server.onrender.com/api'
+const apiURL = import.meta.env.VITE_APP_SERVER_URL;
 
 function EditCard() {
     const {cardId}= useParams();

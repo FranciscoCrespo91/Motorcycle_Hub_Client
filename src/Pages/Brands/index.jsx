@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import "./styles.css"
 
-const apiURL = "http://localhost:5005/api/motorcycles";
+const apiURL = import.meta.env.VITE_APP_SERVER_URL;
 
 function BrandsPage() {
   const {brand} = useParams();
@@ -16,7 +16,7 @@ function BrandsPage() {
 
 
   useEffect(() => {
-    axios.get(`${apiURL}/${brand}`).then((response) => {
+    axios.get(`${apiURL}/motorcycles/${brand}`).then((response) => {
       setAllModels(response.data);
       console.log('ResponseDATA',response.data);
     });
