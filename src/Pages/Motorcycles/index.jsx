@@ -15,62 +15,62 @@ export default function MotorcyclesPage() {
 
   const itemData = [
     {
-      img: 'http://motorcycle-brands.com/wp-content/uploads/2017/07/symbol-of-Honda.jpg',
+      img: 'https://motorcycle-brands.com/wp-content/uploads/2017/07/symbol-of-Honda.jpg',
       title: 'Honda',
   
     },
     {
-      img: 'http://motorcycle-brands.com/wp-content/uploads/2016/08/Kawasaki-logo.png',
+      img: 'https://motorcycle-brands.com/wp-content/uploads/2016/08/Kawasaki-logo.png',
       title: 'Kawasaki',
       
     },
     {
-      img: 'http://motorcycle-brands.com/wp-content/uploads/2016/08/KTM-logo.png',
+      img: 'https://motorcycle-brands.com/wp-content/uploads/2016/08/KTM-logo.png',
       title: 'KTM',
       
     },
     {
-      img: 'http://motorcycle-brands.com/wp-content/uploads/2016/08/Husqvarna-logo.png',
+      img: 'https://motorcycle-brands.com/wp-content/uploads/2016/08/Husqvarna-logo.png',
       title: 'Husqvarna',
       
     },
     {
-      img: 'http://motorcycle-brands.com/wp-content/uploads/2016/07/logo-harley-davidson.png',
+      img: 'https://motorcycle-brands.com/wp-content/uploads/2016/07/logo-harley-davidson.png',
       title: 'Harley-Davidson',
       
     },
     {
-      img: 'http://motorcycle-brands.com/wp-content/uploads/2017/10/indian-logo.png',
+      img: 'https://motorcycle-brands.com/wp-content/uploads/2017/10/indian-logo.png',
       title: 'Indian',
       
     },
     {
-      img: 'http://motorcycle-brands.com/wp-content/uploads/2016/07/ducati-logo.png',
+      img: 'https://motorcycle-brands.com/wp-content/uploads/2016/07/ducati-logo.png',
       title: 'Ducati',
       
     },
     {
-      img: 'http://motorcycle-brands.com/wp-content/uploads/2016/08/Aprilia-logo.png',
+      img: 'https://motorcycle-brands.com/wp-content/uploads/2016/08/Aprilia-logo.png',
       title: 'Aprilia',
       
     },
     {
-      img: 'http://motorcycle-brands.com/wp-content/uploads/2016/08/triumph-logo.png',
+      img: 'https://motorcycle-brands.com/wp-content/uploads/2016/08/triumph-logo.png',
       title: 'Triumph',
       
     },
     {
-      img: 'http://motorcycle-brands.com/wp-content/uploads/2016/08/Royal-Enfield-logo-1.jpg',
+      img: 'https://motorcycle-brands.com/wp-content/uploads/2016/08/Royal-Enfield-logo-1.jpg',
       title: 'Royal Enfield',
       
     },
     {
-      img: 'http://motorcycle-brands.com/wp-content/uploads/2016/08/BMW-Logo-motorcycle.jpg',
+      img: 'https://motorcycle-brands.com/wp-content/uploads/2016/08/BMW-Logo-motorcycle.jpg',
       title: 'BMW',
       
     },
     {
-      img: 'http://motorcycle-brands.com/wp-content/uploads/2017/10/zundapp-logo.png',
+      img: 'https://motorcycle-brands.com/wp-content/uploads/2017/10/zundapp-logo.png',
       title: 'Zundap',
       
     }
