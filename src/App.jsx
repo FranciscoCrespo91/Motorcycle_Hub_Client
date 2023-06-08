@@ -19,6 +19,7 @@ import EditCard from './Pages/Marketplace/editCard';
 import EditUserCard from './Pages/UserProfile/editUserCard';
 
 
+
 function App() {
 
 
@@ -41,7 +42,7 @@ function App() {
         <Route path="/aboutus" element={<AboutUsPage/>}/> 
 
         <Route path="/signup" element={<SignUpPage/>}/>
-        <Route path="/login" element={<LoginPage/>}/>    
+        <Route path="/login" element={<LoginPage/>}/>       
         <Route path="/profile" element={<UserProfile/>}/>    
         <Route path="/profile/edit/:userId" element={<EditUserCard/>}/>    
         

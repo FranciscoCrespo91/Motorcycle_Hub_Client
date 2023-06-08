@@ -1,4 +1,4 @@
-import * as React from "react";
+import React, {useContext} from "react";
 import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
 import Toolbar from "@mui/material/Toolbar";
@@ -13,13 +13,16 @@ import Tooltip from "@mui/material/Tooltip";
 import MenuItem from "@mui/material/MenuItem";
 import AdbIcon from "@mui/icons-material/Adb";
 import TwoWheelerIcon from '@mui/icons-material/TwoWheeler';
+import { AuthContext } from "../../Context/auth.context";
 
 import "./styles.css"
 
 const pages = ["motorcycles", "marketplace", "about us"];
-const settings = ["Profile", "Login", "Sign Up", "Logout"];
+const settings = ["Profile", "Login", "Sign Up"];
 
 function ResponsiveAppBar() {
+const {user, logOutUser} = useContext(AuthContext)
+
   const [anchorElNav, setAnchorElNav] = React.useState(null);
   const [anchorElUser, setAnchorElUser] = React.useState(null);
 
@@ -165,6 +168,15 @@ function ResponsiveAppBar() {
                   {setting}
                 </MenuItem>
               ))}
+              {user && <MenuItem
+                  key={'Logout'}
+                  onClick={logOutUser}
+                  component="a"
+                  href='/'
+                  textAlign="center"
+                >
+                  Logout
+                </MenuItem>}
             </Menu>
           </Box>
         </Toolbar>
