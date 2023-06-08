@@ -16,7 +16,7 @@ import TwoWheelerIcon from '@mui/icons-material/TwoWheeler';
 
 import "./styles.css"
 
-const pages = ["motorcycles", "marketplace", "aboutus"];
+const pages = ["motorcycles", "marketplace", "about us"];
 const settings = ["profile", "login", "logout"];
 
 function ResponsiveAppBar() {
