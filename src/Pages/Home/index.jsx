@@ -15,8 +15,8 @@ function HomePage() {
     <div className="carousel-item active">
       <img src="images/Carousel2.jpg" className="carousel-img"></img>
       <div className="carousel-caption d-none d-md-block">
-        <h5>Welcome to Motorcycle-Hub!</h5>
-        <p>!!Get ready to ride!!</p>
+        <h3>Welcome to Motorcycle-Hub!</h3>
+        <p>Get ready to ride!</p>
         </div>
       </div>
     
@@ -24,15 +24,15 @@ function HomePage() {
       <img src="images/motorcycles.jpg" className="carousel-img"></img>
       <div className="carousel-caption d-none d-md-block">
         <h3>Brands</h3>
-        <p>Want to learn more about motorcycles and their makers ?!.</p>
-        <a className="links" href="/motorcycles">Check our list of brands here!!</a>
+        <p>Want to learn more about motorcycles and their makers?</p>
+        <a className="links" href="/motorcycles">Check our list of brands here!</a>
       </div>
     </div>
     <div className="carousel-item">
       <img src="images/marketplace.jpg" className="carousel-img"></img>
       <div className="carousel-caption d-none d-md-block">
         <h3>Marketplace</h3>
-        <p> Looking for riding gear?? Or just that perfect part for your motorcycle??</p>
+        <p> Looking for riding gear? Or just that perfect part for your motorcycle?</p>
         <a className="links" href="/marketplace">Check out our user based Marketplace</a>
       </div>
     </div>

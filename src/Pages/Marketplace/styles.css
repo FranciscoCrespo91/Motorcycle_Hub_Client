@@ -1,11 +1,25 @@
 .card-create-form{
     display: flex;
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
+
+    margin: 100px 0;
 }
+.create-card-btn{
+    margin: 10px;
+    padding: 5px 40px;
+}
+
+
 .marketplace-body{
     display: flex;
     flex-direction: column;
-   
+    align-items: center;
+    margin-top: 100px;
+}
+.marketplace-body h1{
+    padding-bottom: 20px;
 }
 .cards{
     display: flex;
@@ -31,7 +45,7 @@
     border-radius: 4px;
     background-color: white;
     height: auto;
-    width: 600px;
+    width: 38vw;
     margin: 5px;
     padding: 5px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19) 

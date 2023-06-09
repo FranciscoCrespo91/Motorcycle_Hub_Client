@@ -1,6 +1,11 @@
+.brands-page{
+    margin-top: 100px;
+    padding-bottom: 100px;
+}
+
 .MuiImageList-root{
-    margin-left: 5%;
-    margin-right: 5%;
+    margin: 0 5%;
+
     display: grid;
     overflow: hidden;
     

@@ -33,7 +33,7 @@ function UserProfile() {
   },[user]);
 
   return (
-    <div>
+    <div className="profile-page">
       {!isLoggedIn && (
         <div>
           <p>Please <a href="/login">Login</a> to view your profile page</p>
@@ -41,34 +41,19 @@ function UserProfile() {
       )}
       {isLoggedIn && (
         <div>
-          <section className="profile-user-card">
-            {userData &&(
-              <h1 className="title"> {userData.name}'s Profile</h1>
-            )}
-
-            <div>
-              {userData &&(
-                <div>
-                    <UserCard userData={userData}/>
-                    <a href={`/profile/edit/${userData._id}`}>Update Profile</a>
-                </div>
-            )}
-              {!userData && (
-                <div>
-                  <p>Loading</p>
-                </div>
-              )}
-            </div>
-          </section>
-
-          <section className="profile-user-motorcycle">
+          <section>
+            {!userData && (
               <div>
-                <a href="#">Create a Motorcycle</a>
-                User Motorcycles go here
+                <p>Loading</p>
               </div>
-
+            )}
+            {userData &&(
+              <div className="profile-user-card">
+                <h1 className="title"> {userData.name}'s Profile</h1>
+                <UserCard userData={userData}/>
+              </div>
+            )}
           </section>
-          <section className="profile-marketplace">User Marketplace cards go here</section>
        </div>
       )}
     </div>

@@ -22,34 +22,35 @@ function BrandsPage() {
     });
   }, []);
 
-  /*  {allModels.map((model)=>{
-    if(models.brand==={specificBrand}&& models.brandImg ){brandModels.push(models)};
-  }
-  )} */
 
   return (
-    <div>
+    <div className="models-page">
       <h1>{brand} Models</h1>
+      <hr style={{width:'90vw', margin:'0'}}/>
       {allModels &&
         allModels.map((models) => {
           if(models.modelImg!=="https://freesvg.org/img/motorcycleicon.png")
           {
           return(
-          <div className="brand-cards" key="models._id">
-            <img src={models.modelImg} alt="" />
+          <div className="model-card" key="models._id">
             <h3>Model: {models.model}</h3>
-            <p>Production Year: {models.year}</p>
-            <p>Type: {models.type}</p>
-            <p>Engine: {models.engine}</p>
-            <p>Bore Stroke: {models.boreStroke}</p>
-            <p>Fuel Capacity: {models.fuelCapacity}</p>
-            <p>Front Suspension: {models.frontSuspension}</p>
-            <p>Rear Suspension: {models.rearSuspension}</p>
-            <p>Front Tire: {models.frontTire}</p>
-            <p>Rear Tire: {models.rearTire}</p>
-            <p>Front Brakes: {models.frontBrakes}</p>
-            <p>Rear Brakes: {models.rearBrakes}</p>
-            <p>Seat Height: {models.height}</p>
+            <div className="model-card-info">
+              <img src={models.modelImg} alt="" />
+              <div className="model-card-description">
+                <p><strong>Production Year:</strong> {models.year}</p>
+                <p><strong>Type:</strong> {models.type}</p>
+                <p><strong>Engine:</strong> {models.engine}</p>
+                <p><strong>Bore Stroke:</strong> {models.boreStroke}</p>
+                <p><strong>Fuel Capacity:</strong> {models.fuelCapacity}</p>
+                <p><strong>Front Suspension:</strong> {models.frontSuspension}</p>
+                <p><strong>Rear Suspension:</strong> {models.rearSuspension}</p>
+                <p><strong>Front Tire:</strong> {models.frontTire}</p>
+                <p><strong>Rear Tire:</strong> {models.rearTire}</p>
+                <p><strong>Front Brakes:</strong> {models.frontBrakes}</p>
+                <p><strong>Rear Brakes:</strong> {models.rearBrakes}</p>
+                <p><strong>Seat Height:</strong> {models.height}</p>
+              </div>
+            </div>
           </div>)}
           <hr></hr>
         })}

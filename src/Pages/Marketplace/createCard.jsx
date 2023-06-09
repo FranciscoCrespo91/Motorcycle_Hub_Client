@@ -66,6 +66,7 @@ function CreateCard() {
 
   return (
     <div className='card-create-form'>
+        <h1>Create Card</h1>
         <form onSubmit={handleSubmit}>
             
             <label>Type of Card:</label>
@@ -75,7 +76,7 @@ function CreateCard() {
                 <option value='offer'>Offer</option>
             </select>
 
-            <label>Product or Service?:</label>
+            <label>Product / Service:</label>
             <select value={contentType} onChange={handleContentType}>
                 <option value=''>Select an option</option>
                 <option value='product'>Product</option>
@@ -97,7 +98,7 @@ function CreateCard() {
             <label>Price:</label>
             <input type="text" name='price' value={price} onChange={handlePrice}/>
 
-            <button type='submit'>Create Card</button>
+            <button type='submit' className='create-card-btn'>Create</button>
         </form>
     
     </div>

@@ -1,4 +1,30 @@
-.brand-cards{
-    margin-top: 100px;
-    margin-bottom: 100px;
+.models-page{
+ margin-top: 100px;
+}
+
+.model-card{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    margin-top: 30px;
+
+    width: 90vw;
+}
+.model-card-info{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.model-card-info img{
+    height: 300px;
+}
+.model-card-description{
+    width: 50%;
+}
+.model-card-info p{
+    margin: 0;
+    font-size: small;
 }

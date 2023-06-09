@@ -1,5 +1,16 @@
+#carouselExampleCaptions {
+  margin: 100px 0;
+
+  width: 90vw;
+  height: 80vh;
+  border-radius: 7px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.8), 0 6px 20px 0 rgba(0, 0, 0, 0.8);
+}
+
+
 .carousel-caption {
   background-color: rgba(22, 21, 21, 0.5);
+  border-radius: 5px;
 }
 
 .links {
@@ -7,7 +18,7 @@
 }
 .carousel-img {
   width: 90vw;
-  height: 90vh;
+  height: 80vh;
   border-radius: 7px;
 }
 .carousel-control-prev {
@@ -27,9 +38,3 @@
   height: 10%;
 }
 
-#carouselExampleCaptions {
-  width: 90vw;
-  height: 90vh;
-  border-radius: 7px;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.8), 0 6px 20px 0 rgba(0, 0, 0, 0.8);
-}

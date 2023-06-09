@@ -61,33 +61,37 @@ export default function MotorcyclesPage() {
   ];
 
   return (
-    <ImageList sx={{}}>
-      {itemData.map((item) => (
-        <ImageListItem key={item.img}>
-          <img
-            className="list-img"
-            src={`${item.img}?w=248&fit=contain&auto=format`}
-            srcSet={`${item.img}?w=248&fit=contain&auto=format&dpr=2 2x`}
-            alt={item.title}
-            loading="lazy"
-          />
-          <ImageListItemBar
-            className="list-item-bar"
-            title={item.title}
-            actionIcon={
-              <IconButton
-                className="info-button"
-                sx={{ color: "rgba(255, 255, 255, 0.54)" }}
-                aria-label={`info about ${item.title}`}
-              >
-                <Link to={`/motorcycles/${item.title}`}>
-                  <InfoIcon />
-                </Link>
-              </IconButton>
-            }
-          />
-        </ImageListItem>
-      ))}
-    </ImageList>
+    <div className="brands-page">
+      <h1>Brands</h1>
+      <hr style={{width:'90vw', margin:'0 4%'}}/>
+      <ImageList sx={{}}>
+        {itemData.map((item) => (
+          <ImageListItem key={item.img}>
+            <img
+              className="list-img"
+              src={`${item.img}?w=248&fit=contain&auto=format`}
+              srcSet={`${item.img}?w=248&fit=contain&auto=format&dpr=2 2x`}
+              alt={item.title}
+              loading="lazy"
+            />
+            <ImageListItemBar
+              className="list-item-bar"
+              title={item.title}
+              actionIcon={
+                <IconButton
+                  className="info-button"
+                  sx={{ color: "rgba(255, 255, 255, 0.54)" }}
+                  aria-label={`info about ${item.title}`}
+                >
+                  <Link to={`/motorcycles/${item.title}`}>
+                    <InfoIcon />
+                  </Link>
+                </IconButton>
+              }
+            />
+          </ImageListItem>
+        ))}
+      </ImageList>
+    </div>
   );
 }

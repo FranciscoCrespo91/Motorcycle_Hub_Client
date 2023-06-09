@@ -70,10 +70,8 @@ function EditUserCard() {
   }, []);
 
   return (
-    <div>
+    <div className="profile-update-page">
       <h1>Update User</h1>
-      <div>
-        {
           <form onSubmit={handleSubmit}>
            
             <label>Name:</label>
@@ -85,10 +83,8 @@ function EditUserCard() {
             <label>Bio:</label>
             <input type="text" name="bio" value={bio} onChange={handleBio} />
 
-            <button type="submit">Submit changes</button>
+            <button type="submit" className="update-btn">Update</button>
           </form>
-        }
-      </div>
     </div>
   );
 }

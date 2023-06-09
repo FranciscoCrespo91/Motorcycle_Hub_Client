@@ -61,12 +61,14 @@ function MarketPlacePage() {
     <div className='marketplace-body'>
       <h1>Marketplace</h1>
       {isLoggedIn &&(
-      <Link to='/marketplace/create'>Create a Card</Link>)} 
+        <Link to='/marketplace/create'>Create a Card</Link>)} 
       {!isLoggedIn && (
         <p className='login-text'>You need to <a href='/login'>Login</a> to be able to Create, Edit or Delete Cards</p>
       )}     
       <div className='cards'>
-
+        {!cards && (
+          <h2>Loading</h2>
+        )}
         <div className='cards-container'>
           <h2>Riders are Requesting</h2>
           <div className='requests-list'>
@@ -92,14 +94,17 @@ function MarketPlacePage() {
                   </div>
                   <p className='card-description'><strong>Description:</strong></p>
                   <p className='card-description'>{card.description}</p>
-                  <p><strong>Link:</strong> </p>
-                  <a href={card.link} style={{textAlign:'left', paddingLeft:'5px'}}>{card.link}</a>
+                  {card.link && (
+                    <div>
+                      <p><strong>Link:</strong> </p>
+                      <a href={card.link} style={{textAlign:'left', paddingLeft:'5px'}}>{card.link}</a>
+                    </div>
+                  )}
                   <p><strong>By:</strong> {card.owner.name} | <strong>Contact:</strong> {card.owner.email} | <strong>Created:</strong> {card.createdAt.slice(0,10)}</p>
                 </article>
               )
-            }): <p>There are no cards yet. You can create a new request by clicking on the Add button on the top of the screen</p>
-            
-            }
+                }): <p>There are no cards yet. You can create a new request by clicking on the Add button on the top of the screen</p>
+              }
           </div>
         </div>
 
@@ -133,9 +138,8 @@ function MarketPlacePage() {
                   <p><strong>By:</strong> {card.owner.name} | <strong>Contact:</strong> {card.owner.email} |  <strong>Created:</strong> {card.createdAt.slice(0,10)}</p>
                 </article>
               )
-            }): <p>There are no cards yet. You can create a new request by clicking on the Add button on the top of the screen</p>
-            
-            }
+                }): <p>There are no cards yet. You can create a new offer by clicking on the Add button on the top of the screen</p>  
+              }
           </div>
         </div>
       </div>
